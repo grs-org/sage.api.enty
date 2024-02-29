@@ -126,7 +126,7 @@ namespace Uni.Sage.Domain.Entities
             DO_Date =DateTime.MinValue.MinGregorianDate();
             DO_Ref ="";
             DO_Tiers ="";
-            CO_No = 7;
+            CO_No = 1;
             DO_Period =1;
             DO_Devise = 0;
             DO_Cours =0;

@@ -138,7 +138,7 @@ namespace Uni.Sage.Domain.Entities
             DL_Taxe2 = 0;
             DL_TypeTaux2 = 0;
             DL_TypeTaxe2 = 0;
-            CO_No = 7;
+            CO_No = 1;
             AG_No1 = 0;
             AG_No2 = 0;
             DL_PrixRU = 0;
@@ -150,7 +150,7 @@ namespace Uni.Sage.Domain.Entities
             EU_Qte = 0;
             DL_TTC = 1;
             DE_No = 1;
-            cbDE_No = 0;
+            cbDE_No = 1;
             DL_NoRef = 1;
             DL_TypePL = 0;
             DL_PUDevise = 0;

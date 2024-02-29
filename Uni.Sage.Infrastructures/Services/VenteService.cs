@@ -47,7 +47,7 @@ namespace Uni.Sage.Infrastructures.Services
                 
                 //Existence client
 
-                var oClient = await Repo.QueryFirstOrDefaultAsync<ClientResponse>("SELECT_CLIENT_BYID", new { CodeClient = "BAGUES" });
+                var oClient = await Repo.QueryFirstOrDefaultAsync<ClientResponse>("SELECT_CLIENT_BYID", new { CodeClient = "C00001" });
                 if (oClient == null)
                 {
                     throw new ApiException("Client introuvable!");
@@ -60,7 +60,7 @@ namespace Uni.Sage.Infrastructures.Services
                 F_DOCENTETE oF_DOCENTETE = DocEntetMapper.Adapt(Request, 0, 1);
 
                 oF_DOCENTETE.CG_Num = "4110000";
-                oF_DOCENTETE.DO_Tiers = "BAGUES";
+                oF_DOCENTETE.DO_Tiers = "C00001";
                 oF_DOCENTETE.DO_Tarif=(short)oClient.CodeTarif;
                 oF_DOCENTETE.CA_Num = "953FRAN";
                 //oF_DOCENTETE.Source_BC = "DEV";
@@ -126,7 +126,7 @@ namespace Uni.Sage.Infrastructures.Services
                                 DC_Domaine = oF_DOCENTETE.DO_Domaine,
                                 DC_IdCol = oF_DOCENTETE.DO_Type
                             });
-                        oF_DOCENTETE.CT_NumPayeur = "BAGUES";
+                        oF_DOCENTETE.CT_NumPayeur = "C00001";
                         await insertRepo.QueryAsync<int>("INSERT_F_DOCENTETE", oF_DOCENTETE);
 
                         F_DOCREGLE f_DOCREGLE = new F_DOCREGLE(oF_DOCENTETE);
