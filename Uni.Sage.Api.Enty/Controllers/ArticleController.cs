@@ -26,12 +26,7 @@ namespace Uni.Sage.Api.Enty.Controllers
             return Ok(result);
         }
 
-        [HttpGet(nameof(GetArticlesParDepot))]
-        public async Task<ActionResult> GetArticlesParDepot(string pConnexionName)
-        {
-            var result =await _ArticleService.GetArticlesParDepot(pConnexionName);
-            return Ok(result);
-        }
+       
 
        
     }

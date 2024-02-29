@@ -17,6 +17,7 @@ namespace Uni.Sage.Domain.Entities
         public decimal PoidsBrut { get; set; }
         public decimal PoidsNet { get; set; }
         public string Unite { get; set; }
+        public decimal PrixVente { get; set; }
 
     }
     public class ArticleParDepotResponse
@@ -38,5 +39,13 @@ namespace Uni.Sage.Domain.Entities
         public decimal QuantiteReserve { get; set; }
         public int CodeDepot { get; set; }
 
+    }
+    public class ArticleParPrixResponse
+    {
+        public string Reference { get; set; }
+        public string Designation { get; set; }
+        public string Famille { get; set; }
+        public string CodeFamille { get; set; }
+        public decimal PrixVente { get; set; }
     }
 }
