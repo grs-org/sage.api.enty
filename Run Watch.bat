@@ -1,0 +1,1 @@
+dotnet watch --project Uni.Sage.Api.Enty  run --urls=http://localhost:5050/

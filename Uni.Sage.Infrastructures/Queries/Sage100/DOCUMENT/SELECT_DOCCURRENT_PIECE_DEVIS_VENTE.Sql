@@ -1,0 +1,1 @@
+﻿select  DC_Piece Piece from F_DOCCURRENTPIECE where DC_Domaine =0 and DC_IdCol = 0 and DC_Souche = @Souche - 1

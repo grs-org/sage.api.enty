@@ -1,0 +1,1 @@
+﻿select  cbIndice as Indice, S_Intitule as Intitule from P_SOUCHEINTERNE where S_valide = 1

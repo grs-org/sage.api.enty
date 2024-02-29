@@ -1,0 +1,1 @@
+﻿SELECT  TA_Code,TA_Intitule,TA_Taux,CG_Num,TA_Type,TA_Sens  from F_TAXE

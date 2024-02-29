@@ -1,0 +1,1 @@
+﻿select isnull( max(dl_no) + 1,1) as DLNO from f_docligne 

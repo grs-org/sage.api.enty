@@ -1,0 +1,51 @@
+﻿
+INSERT INTO [dbo].[F_ARTSTOCK]
+           ([AR_Ref]
+           ,[DE_No]
+           ,[AS_QteMini]
+           ,[AS_QteMaxi]
+           ,[AS_MontSto]
+           ,[AS_QteSto]
+           ,[AS_QteRes]
+           ,[AS_QteCom]
+           ,[AS_Principal]
+           ,[AS_QteResCM]
+           ,[AS_QteComCM]
+           ,[AS_QtePrepa]
+           ,[DP_NoPrincipal]
+           ,[DP_NoControle]
+           ,[AS_QteAControler]
+           ,[AS_Mouvemente]
+           ,[cbProt]
+           ,[cbCreateur]
+           ,[cbModification]
+           ,[cbReplication]
+           ,[cbFlag]
+           ,[cbCreation]
+           ,[cbCreationUser])
+     VALUES
+           (@AR_Ref),
+           (@DE_No),
+           (@AS_QteMini),
+           (@AS_QteMaxi),
+           (@AS_MontSto),
+           (@AS_QteSto),
+           (@AS_QteRes),
+           (@AS_QteCom),
+           (@AS_Principal),
+           (@AS_QteResCM),
+           (@AS_QteComCM),
+           (@AS_QtePrepa),
+           (@DP_NoPrincipal),
+           (@DP_NoControle),
+           (@AS_QteAControler),
+           (@AS_Mouvemente),
+           (@cbProt),
+           (@cbCreateur),
+           (@cbModification),
+           (@cbReplication),
+           (@cbFlag),
+           (@cbCreation),
+           (@cbCreationUser)
+
+

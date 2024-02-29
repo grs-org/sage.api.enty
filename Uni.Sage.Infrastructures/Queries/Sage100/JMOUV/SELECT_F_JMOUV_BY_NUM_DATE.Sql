@@ -1,0 +1,1 @@
+﻿SELECT F_JMOUV.JO_Num,JM_Date,JM_Cloture FROM F_JMOUV WHERE JO_Num = @JO_Num AND JM_Date =@JM_Date

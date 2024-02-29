@@ -1,0 +1,1 @@
+﻿select cbIndice Indice,E_Mode Mode,E_Intitule Intitule ,AR_Ref  Reference from P_EXPEDITION where len(E_Intitule)>0

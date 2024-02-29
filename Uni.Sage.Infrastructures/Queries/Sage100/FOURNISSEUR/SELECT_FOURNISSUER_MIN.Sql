@@ -1,0 +1,1 @@
+﻿SELECT fc.CT_Num,CG_NumPrinc,fc.CT_Intitule  FROM F_COMPTET fc WHERE CT_Type = 1

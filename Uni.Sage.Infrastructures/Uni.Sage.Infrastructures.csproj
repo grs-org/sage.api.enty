@@ -1,0 +1,150 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Queries\Sage100c5\COLLABORATEUR\SELECT_COLLABORATEUR_MIN.Sql" />
+    <None Remove="Queries\Sage100c5\DOCENTETE\INSERT_F_DOCENTETE.Sql" />
+    <None Remove="Queries\Sage100c5\DOCREGLE\INSERT_F_DOCREGL.Sql" />
+    <None Remove="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE.Sql" />
+    <None Remove="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_ACHAT.Sql" />
+    <None Remove="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_VENTE.Sql" />
+    <None Remove="Queries\Sage100\ARTICLE\SELECT_ARTCILE_ISACTIF.Sql" />
+    <None Remove="Queries\Sage100\ARTICLE\SELECT_ARTICLE_MIN.Sql" />
+    <None Remove="Queries\Sage100\ARTICLE\SELECT_ARTICLE_MIN_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\ARTICLE\SELECT_ARTICLE_PAR_DEPOT.Sql" />
+    <None Remove="Queries\Sage100\ARTICLE\SELECT_ARTICLE_PAR_DEPOT_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\ARTSTOCK\INSERT_ARTSTOCK.Sql" />
+    <None Remove="Queries\Sage100\ARTSTOCK\SELECT_STOCK_ARTICLE.Sql" />
+    <None Remove="Queries\Sage100\ARTSTOCK\UPDATE_QTE_RESERVE.Sql" />
+    <None Remove="Queries\Sage100\CATTARIF\SELECT_CATTARIF.Sql" />
+    <None Remove="Queries\Sage100\CATTARIF\SELECT_CATTARIF_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\CLIENT\SELECT_CLIENT.Sql" />
+    <None Remove="Queries\Sage100\CLIENT\SELECT_CLIENT_BYID.Sql" />
+    <None Remove="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR.Sql" />
+    <None Remove="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR_MIN.Sql" />
+    <None Remove="Queries\Sage100\COMPTEA\SELECT_F_COMPTEA_MIN.Sql" />
+    <None Remove="Queries\Sage100\COMPTEG\SELECT_F_COMPTEG_MIN.Sql" />
+    <None Remove="Queries\Sage100\DEPOT\SELECT_DEPOT.Sql" />
+    <None Remove="Queries\Sage100\DEPOT\SELECT_DEPOT_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\DEPOT\SELECT_DEPOT_PRINCIPAL.Sql" />
+    <None Remove="Queries\Sage100\DEVISE\SELECT_P_DEVISE_BY_CODE.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\INSERT_F_DOCENTETE.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\INSERT_F_DOCLIGNE.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\SELECT_COUNT_DLNO.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\SELECT_DEVIS_ENTETE_ACHAT.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\SELECT_DEVIS_ENTETE_VENTE.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_ACHAT.Sql" />
+    <None Remove="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_VENTE.Sql" />
+    <None Remove="Queries\Sage100\DOCENTETE\SELECT_F_DOCCURRENTPIECE.Sql" />
+    <None Remove="Queries\Sage100\DOCENTETE\SELECT_F_DOCENETETE.Sql" />
+    <None Remove="Queries\Sage100\DOCENTETE\UPDATE_F_DOCCURRENTPIECE.Sql" />
+    <None Remove="Queries\Sage100\DOCREGLE\INSERT_F_DOCREGL.Sql" />
+    <None Remove="Queries\Sage100\DOCUMENT\SELECT_DOCCURRENT_PIECE_DEVIS_VENTE.Sql" />
+    <None Remove="Queries\Sage100\DOCUMENT\UPDATE_DOCCURRENT_PIECE_DEVIS_VENTE.Sql" />
+    <None Remove="Queries\Sage100\EMPLACEMENT\SELECT_EMPLACEMENT.Sql" />
+    <None Remove="Queries\Sage100\EXERCICE\SELECT_EXERCICE_BY_DATE.Sql" />
+    <None Remove="Queries\Sage100\EXPEDITION\SELECT_EXPEDITION.Sql" />
+    <None Remove="Queries\Sage100\FAMILLE\SELECT_FAMILLE.Sql" />
+    <None Remove="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSEUR.Sql" />
+    <None Remove="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSEUR_MIN_BY_NUM.Sql" />
+    <None Remove="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSUER_MIN.Sql" />
+    <None Remove="Queries\Sage100\JMOUV\SELECT_F_JMOUV_BY_NUM_DATE.Sql" />
+    <None Remove="Queries\Sage100\SOUCHE\SELECT_SOUCHE_ACHAT.Sql" />
+    <None Remove="Queries\Sage100\SOUCHE\SELECT_SOUCHE_BY_ID.Sql" />
+    <None Remove="Queries\Sage100\SOUCHE\SELECT_SOUCHE_INTERNE.Sql" />
+    <None Remove="Queries\Sage100\SOUCHE\SELECT_SOUCHE_VENTE.Sql" />
+    <None Remove="Queries\Sage100\TARIFCLIENT\SELECT_TARIFCLIENT.Sql" />
+    <None Remove="Queries\Sage100\TAXE\SELECT_F_TAXE.Sql" />
+    <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE.Sql" />
+    <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE_FAM.Sql" />
+    <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_FAM_ART.Sql" />
+    <None Remove="Queries\Template.Sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Queries\Sage100c5\COLLABORATEUR\SELECT_COLLABORATEUR_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100c5\DOCENTETE\INSERT_F_DOCENTETE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100c5\DOCREGLE\INSERT_F_DOCREGL.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_ACHAT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\AFFAIRE\SELECT_AFFAIRE_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTICLE\SELECT_ARTICLE_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTICLE\SELECT_ARTICLE_PAR_DEPOT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTICLE\SELECT_ARTCILE_ISACTIF.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTICLE\SELECT_ARTICLE_PAR_DEPOT_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTICLE\SELECT_ARTICLE_MIN_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTSTOCK\INSERT_ARTSTOCK.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTSTOCK\UPDATE_QTE_RESERVE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\ARTSTOCK\SELECT_STOCK_ARTICLE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\CATTARIF\SELECT_CATTARIF.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\CATTARIF\SELECT_CATTARIF_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\CLIENT\SELECT_CLIENT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\CLIENT\SELECT_CLIENT_BYID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\COLLABORATEUR\SELECT_COLLABORATEUR_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\COMPTEA\SELECT_F_COMPTEA_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\COMPTEG\SELECT_F_COMPTEG_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEPOT\SELECT_DEPOT_PRINCIPAL.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEPOT\SELECT_DEPOT_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEPOT\SELECT_DEPOT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEVISE\SELECT_P_DEVISE_BY_CODE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_ENTETE_ACHAT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_ENTETE_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_ACHAT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCENTETE\SELECT_F_DOCENETETE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCENTETE\UPDATE_F_DOCCURRENTPIECE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCENTETE\SELECT_F_DOCCURRENTPIECE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCLIGNE\SELECT_F_DOCLIGNE_MAX_DL_NO.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCENTETE\INSERT_F_DOCENTETE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCLIGNE\INSERT_F_DOCLIGNE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCREGLE\INSERT_F_DOCREGL.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCUMENT\UPDATE_DOCCURRENT_PIECE_DEVIS_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\EMPLACEMENT\SELECT_EMPLACEMENT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\EXERCICE\SELECT_EXERCICE_BY_DATE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\EXPEDITION\SELECT_EXPEDITION.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\FAMILLE\SELECT_FAMILLE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSEUR_MIN_BY_NUM.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSUER_MIN.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\FOURNISSEUR\SELECT_FOURNISSEUR.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\JMOUV\SELECT_F_JMOUV_BY_NUM_DATE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCUMENT\SELECT_DOCCURRENT_PIECE_DEVIS_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\SOUCHE\SELECT_SOUCHE_ACHAT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\SOUCHE\SELECT_SOUCHE_INTERNE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\SOUCHE\SELECT_SOUCHE_VENTE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\SOUCHE\SELECT_SOUCHE_BY_ID.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\TARIFCLIENT\SELECT_TARIFCLIENT.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_F_TAXE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE_FAM.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_FAM_ART.Sql" />
+    <EmbeddedResource Include="Queries\Template.Sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Uni.Sage.Application\Uni.Sage.Application.csproj" />
+    <ProjectReference Include="..\Uni.Sage.Domain\Uni.Sage.Domain.csproj" />
+    <ProjectReference Include="..\Uni.Sage.Shared\Uni.Sage.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helper\" />
+    <Folder Include="Queries\Sage100c5\ARTICLE\" />
+  </ItemGroup>
+
+</Project>

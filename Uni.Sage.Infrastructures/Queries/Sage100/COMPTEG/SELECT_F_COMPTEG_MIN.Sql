@@ -1,0 +1,1 @@
+﻿SELECT  CG.CG_Num, CG.N_Nature ,CG.CG_Analytique  FROM F_COMPTEG CG

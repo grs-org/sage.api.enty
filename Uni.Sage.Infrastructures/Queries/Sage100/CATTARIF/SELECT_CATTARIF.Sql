@@ -1,0 +1,1 @@
+﻿select cbIndice Indice,CT_Intitule Intitule from P_CATTARIF where len(CT_Intitule)>0

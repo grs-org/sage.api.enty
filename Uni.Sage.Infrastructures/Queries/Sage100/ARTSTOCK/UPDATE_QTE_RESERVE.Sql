@@ -1,0 +1,1 @@
+﻿update F_ARTSTOCK set AS_QteRes = @QuantiteReserve where  DE_No = @CodeDepot and F_ARTSTOCK.AR_Ref = @Reference

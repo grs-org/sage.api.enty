@@ -1,0 +1,1 @@
+﻿SELECT cbIndice, D_Intitule ,D_Cours,D_CodeISO FROM P_DEVISE  WHERE D_CodeISO = @D_CodeISO

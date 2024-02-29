@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "IPHABIOTICS",
+    "Version": "100c5",
+    "ConnectionString": "Server=.; Database=IPHABIOTICS;User Id=sage; Password=M2@soft*2020; MultipleActiveResultSets=True;"
+  },
+  {
+    "Name": "BIJOU",
+    "Version": "100c8",
+    "ConnectionString": "Server=.; Database=BIJOU;Trusted_Connection=True; MultipleActiveResultSets=True;"
+  },
+  {
+    "Name": "ENOMAROC",
+    "Version": "100c6",
+    "ConnectionString": "Server=192.168.1.188\\SAGE100; Database=ENOMAROC;User Id=sa; Password=M2@soft*2020; MultipleActiveResultSets=True;"
+  }
+]
