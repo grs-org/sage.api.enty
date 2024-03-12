@@ -44,6 +44,7 @@
     <None Remove="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_VENTE.Sql" />
     <None Remove="Queries\Sage100\DOCENTETE\SELECT_F_DOCCURRENTPIECE.Sql" />
     <None Remove="Queries\Sage100\DOCENTETE\SELECT_F_DOCENETETE.Sql" />
+    <None Remove="Queries\Sage100\DOCENTETE\SELECT_STATUT_BC.Sql" />
     <None Remove="Queries\Sage100\DOCENTETE\UPDATE_F_DOCCURRENTPIECE.Sql" />
     <None Remove="Queries\Sage100\DOCREGLE\INSERT_F_DOCREGL.Sql" />
     <None Remove="Queries\Sage100\DOCUMENT\SELECT_DOCCURRENT_PIECE_DEVIS_VENTE.Sql" />
@@ -65,6 +66,8 @@
     <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE.Sql" />
     <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE_FAM.Sql" />
     <None Remove="Queries\Sage100\TAXE\SELECT_TAXE_FAM_ART.Sql" />
+    <None Remove="Queries\Sage100\VENTE\SELECT_VENTE_ENTETE.Sql" />
+    <None Remove="Queries\Sage100\VENTE\SELECT_VENTE_LIGNE.Sql" />
     <None Remove="Queries\Template.Sql" />
   </ItemGroup>
 
@@ -102,6 +105,7 @@
     <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_ACHAT.Sql" />
     <EmbeddedResource Include="Queries\Sage100\DEVIS\SELECT_DEVIS_LIGNE_VENTE.Sql" />
     <EmbeddedResource Include="Queries\Sage100\DOCENTETE\SELECT_F_DOCENETETE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\DOCENTETE\SELECT_STATUT_BC.Sql" />
     <EmbeddedResource Include="Queries\Sage100\DOCENTETE\UPDATE_F_DOCCURRENTPIECE.Sql" />
     <EmbeddedResource Include="Queries\Sage100\DOCENTETE\SELECT_F_DOCCURRENTPIECE.Sql" />
     <EmbeddedResource Include="Queries\Sage100\DOCLIGNE\SELECT_F_DOCLIGNE_MAX_DL_NO.Sql" />
@@ -127,6 +131,8 @@
     <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE.Sql" />
     <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_ARTICLE_FAM.Sql" />
     <EmbeddedResource Include="Queries\Sage100\TAXE\SELECT_TAXE_FAM_ART.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\VENTE\SELECT_VENTE_LIGNE.Sql" />
+    <EmbeddedResource Include="Queries\Sage100\VENTE\SELECT_VENTE_ENTETE.Sql" />
     <EmbeddedResource Include="Queries\Template.Sql" />
   </ItemGroup>
 

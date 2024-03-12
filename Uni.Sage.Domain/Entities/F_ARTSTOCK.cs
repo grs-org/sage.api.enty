@@ -53,7 +53,8 @@ namespace Uni.Sage.Domain.Entities
 			cbReplication = 0;
 			cbFlag = 0;
 			cbCreation = DateTime.Now;
+			cbCreationUser = null;
 
-		}
+        }
     }
 }

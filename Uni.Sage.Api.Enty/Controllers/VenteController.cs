@@ -37,6 +37,12 @@ namespace Uni.Sage.Api.Enty.Controllers
         }
 
 
+        [HttpGet(nameof(GetStatutBC))]
+        public async Task<ActionResult> GetStatutBC(string pConnexionName)
+        {
+            var result = await _VenteService.GetStatuBC(pConnexionName);
+            return Ok(result);
+        }
 
 
 

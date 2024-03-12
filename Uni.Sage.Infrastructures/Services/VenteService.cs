@@ -17,6 +17,7 @@ namespace Uni.Sage.Infrastructures.Services
     public interface IVenteService
     {
         Task<IResult<DocumentResponse>> CreateCommande(DocEnteteRequest commande);
+        Task<IResult<List<StatutResponse>>> GetStatuBC(string pConnexionName);
     }
 
     public partial class VenteService : IVenteService
@@ -59,10 +60,10 @@ namespace Uni.Sage.Infrastructures.Services
 
                 F_DOCENTETE oF_DOCENTETE = DocEntetMapper.Adapt(Request, 0, 1);
 
-                oF_DOCENTETE.CG_Num = "4110000";
+                oF_DOCENTETE.CG_Num = oClient.CompteCollectif;
                 oF_DOCENTETE.DO_Tiers = "C00001";
                 oF_DOCENTETE.DO_Tarif=(short)oClient.CodeTarif;
-                oF_DOCENTETE.CA_Num = "953FRAN";
+                oF_DOCENTETE.CA_Num = "";
                 //oF_DOCENTETE.Source_BC = "DEV";
                 if (oF_DOCENTETE.DO_Tarif == 0) oF_DOCENTETE.DO_Tarif= 1;
                
@@ -119,13 +120,22 @@ namespace Uni.Sage.Infrastructures.Services
 
                     try
                     {
-                        oF_DOCENTETE.DO_Piece =await insertRepo.ExecuteScalarAsync<string>("SELECT_F_DOCCURRENTPIECE",
+                        var Do_piece = await insertRepo.ExecuteScalarAsync<string>("SELECT_F_DOCCURRENTPIECE",
                             new
                             {
                                 DC_Souche = oF_DOCENTETE.DO_Souche,
                                 DC_Domaine = oF_DOCENTETE.DO_Domaine,
                                 DC_IdCol = oF_DOCENTETE.DO_Type
                             });
+                        if (Do_piece == null)
+                        {
+                            oF_DOCENTETE.DO_Piece = "1";
+                        }
+                        else
+                        {
+                            oF_DOCENTETE.DO_Piece = Do_piece;
+                        }
+                       
                         oF_DOCENTETE.CT_NumPayeur = "C00001";
                         await insertRepo.QueryAsync<int>("INSERT_F_DOCENTETE", oF_DOCENTETE);
 
@@ -204,6 +214,13 @@ namespace Uni.Sage.Infrastructures.Services
             }
         }
 
-        
+        public async Task<IResult<List<StatutResponse>>> GetStatuBC(string pConnexionName)
+        {
+            using var db = _QueryService.NewDbConnection(pConnexionName);
+            var oQuery = _QueryService.GetQuery("SELECT_STATUT_BC");
+
+            var results = await db.QueryAsync<StatutResponse>(oQuery);
+            return await Result<List<StatutResponse>>.SuccessAsync(results.ToList());
+        }
     }
 }

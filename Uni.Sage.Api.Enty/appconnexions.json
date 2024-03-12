@@ -13,5 +13,10 @@
     "Name": "ENOMAROC",
     "Version": "100c6",
     "ConnectionString": "Server=192.168.1.188\\SAGE100; Database=ENOMAROC;User Id=sa; Password=M2@soft*2020; MultipleActiveResultSets=True;"
+  },
+  {
+    "Name": "HHB",
+    "Version": "100c8",
+    "ConnectionString": "Server=LAB-LAGAICHI\\SAGE100; Database=HHB;Trusted_Connection=True; MultipleActiveResultSets=True;"
   }
 ]

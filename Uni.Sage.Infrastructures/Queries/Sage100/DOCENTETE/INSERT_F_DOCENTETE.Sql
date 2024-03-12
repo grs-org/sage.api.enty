@@ -105,8 +105,7 @@
             cbReplication ,
             cbFlag ,
             cbCreation ,
-            cbHashVersion,
-            Source_BC)
+            cbHashVersion)
      VALUES
            (@DO_Domaine ,
             @DO_Type ,
@@ -214,5 +213,4 @@
             @cbReplication ,
             @cbFlag ,
             @cbCreation ,
-            @cbHashVersion,
-            @Source_BC)
+            @cbHashVersion)

@@ -145,7 +145,7 @@ namespace Uni.Sage.Domain.Entities
             DO_Coord02 ="";
             DO_Coord03 ="";
             DO_Coord04 ="";
-            DO_Souche = 0;
+            DO_Souche = 1;
             DO_DateLivr = DateTime.MinValue.MinGregorianDate();
             DO_Condition = 1;
             DO_Tarif = 1;
