@@ -10,4 +10,4 @@ DO_TotalHT TotalHT,DO_TotalTTC TotalTTC
  left outer join F_COLLABORATEUR c on c.CO_No = F_DOCENTETE.CO_No
  left outer join F_DEPOT dpt on dpt.DE_No = F_DOCENTETE.DE_No
  left outer join P_CATTARIF t on t.cbIndice = F_DOCENTETE.DO_Tarif
-where DO_Type = 5
+where DO_Type = @Type

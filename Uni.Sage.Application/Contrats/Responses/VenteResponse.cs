@@ -21,5 +21,7 @@ namespace Uni.Sage.Application.Contrats.Responses
         public string Tarif { get; set; }
         public decimal TotalHT { get; set; }
         public decimal TotalTTC { get; set; }
+
+        public List<VenteLigneResponse> venteLigneResponses { get; set; }
     }
 }

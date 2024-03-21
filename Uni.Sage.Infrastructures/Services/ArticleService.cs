@@ -31,7 +31,7 @@ namespace Uni.Sage.Api.Enty.Services
              
             try
             {
-                var CodeCatTarif = 2;
+                var CodeCatTarif = 1;
                 using var db = _QueryService.NewDbConnection(pConnexionName);
                 var oQuery = _QueryService.GetQuery("SELECT_ARTICLE_MIN");
 
@@ -59,14 +59,30 @@ namespace Uni.Sage.Api.Enty.Services
                     }
                     else{
 
-                        Article.Add(new ArticleParPrixResponse
+                        if (CatTarif.PrixVente == 0)
                         {
-                            Reference = item.Reference,
-                            CodeFamille = item.CodeFamille,
-                            Designation = item.Designation,
-                            Famille = item.Famille,
-                            PrixVente = CatTarif.PrixVente,
-                        });
+                            Article.Add(new ArticleParPrixResponse
+                            {
+                                Reference = item.Reference,
+                                CodeFamille = item.CodeFamille,
+                                Designation = item.Designation,
+                                Famille = item.Famille,
+                                PrixVente = item.PrixVente,
+                            });
+                        }
+                        else
+                        {
+                            Article.Add(new ArticleParPrixResponse
+                            {
+                                Reference = item.Reference,
+                                CodeFamille = item.CodeFamille,
+                                Designation = item.Designation,
+                                Famille = item.Famille,
+                                PrixVente = CatTarif.PrixVente,
+                            });
+
+                        }
+                      
                     }
                 }
 

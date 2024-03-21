@@ -104,7 +104,7 @@
             cbReplication ,
             cbFlag ,
             cbCreation ,
-            cbHashVersion )
+            cbHashVersion,Client_Inty )
      VALUES
            (@DO_Domaine ,
             @DO_Type ,
@@ -211,4 +211,4 @@
             @cbReplication ,
             @cbFlag ,
             @cbCreation ,
-            @cbHashVersion  )
+            @cbHashVersion,@Client_Inty  )

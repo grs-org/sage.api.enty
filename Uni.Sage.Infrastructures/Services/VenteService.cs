@@ -8,6 +8,7 @@ using Uni.Sage.Application.Contrats.Responses;
 using Uni.Sage.Domain.Entities;
 using Uni.Sage.Domain.Extentions;
 using Uni.Sage.Infrastructures.Mapper;
+using Uni.Sage.Shared.Communication;
 using Uni.Sage.Shared.Exceptions;
 using Uni.Sage.Shared.Extention;
 using Uni.Sage.Shared.Wrapper;
@@ -18,6 +19,8 @@ namespace Uni.Sage.Infrastructures.Services
     {
         Task<IResult<DocumentResponse>> CreateCommande(DocEnteteRequest commande);
         Task<IResult<List<StatutResponse>>> GetStatuBC(string pConnexionName);
+        Task<IResult<List<VenteResponse>>> GetAvoir(string pConnexionName);
+        Task<IResult<List<VenteResponse>>> GetRetour(string pConnexionName);
     }
 
     public partial class VenteService : IVenteService
@@ -59,7 +62,7 @@ namespace Uni.Sage.Infrastructures.Services
                 }
 
                 F_DOCENTETE oF_DOCENTETE = DocEntetMapper.Adapt(Request, 0, 1);
-
+                oF_DOCENTETE.Client_Inty = Request.Client_Inty;
                 oF_DOCENTETE.CG_Num = oClient.CompteCollectif;
                 oF_DOCENTETE.DO_Tiers = "C00001";
                 oF_DOCENTETE.DO_Tarif=(short)oClient.CodeTarif;
@@ -221,6 +224,62 @@ namespace Uni.Sage.Infrastructures.Services
 
             var results = await db.QueryAsync<StatutResponse>(oQuery);
             return await Result<List<StatutResponse>>.SuccessAsync(results.ToList());
+        }
+
+
+        public async Task<IResult<List<VenteResponse>>> GetAvoir(string pConnexionName)
+        {
+            var test = 5;
+            using var insertRepo = _QueryService.NewRepository(pConnexionName);
+            var exeQuery = await insertRepo.QueryAsync<VenteResponse>("SELECT_VENTE_ENTETE", new { Type = test});
+            var results = exeQuery?.ToList();
+
+            var oQuerys = await insertRepo.QueryAsync<VenteLigneResponse>("SELECT_VENTE_LIGNE", new { Type = test });
+            var resultss = oQuerys?.ToList();
+
+           
+
+            foreach (var item in results)
+            {
+                item.venteLigneResponses = new();
+                var soss = resultss.Where(x => x.Piece == item.Piece).ToList();
+                if (soss.Count > 0)
+                {
+                    foreach (var items in soss)
+                    {
+                        item.venteLigneResponses.Add(items);
+                    }
+                }
+            }
+
+            return await Result<List<VenteResponse>>.SuccessAsync(results);
+        }
+        public async Task<IResult<List<VenteResponse>>> GetRetour(string pConnexionName)
+        {
+            var test = 4;
+            using var insertRepo = _QueryService.NewRepository(pConnexionName);
+            var exeQuery = await insertRepo.QueryAsync<VenteResponse>("SELECT_VENTE_ENTETE", new { Type = test });
+            var results = exeQuery?.ToList();
+
+            var oQuerys = await insertRepo.QueryAsync<VenteLigneResponse>("SELECT_VENTE_LIGNE", new { Type = test });
+            var resultss = oQuerys?.ToList();
+
+
+
+            foreach (var item in results)
+            {
+                item.venteLigneResponses = new();
+                var soss = resultss.Where(x => x.Piece == item.Piece).ToList();
+                if (soss.Count > 0)
+                {
+                    foreach (var items in soss)
+                    {
+                        item.venteLigneResponses.Add(items);
+                    }
+                }
+            }
+
+            return await Result<List<VenteResponse>>.SuccessAsync(results);
         }
     }
 }

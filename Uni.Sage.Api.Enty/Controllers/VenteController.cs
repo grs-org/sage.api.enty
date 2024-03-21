@@ -44,6 +44,21 @@ namespace Uni.Sage.Api.Enty.Controllers
             return Ok(result);
         }
 
+        [HttpGet(nameof(GetAvoir))]
+        public async Task<ActionResult> GetAvoir(string pConnexionName)
+        {
+            var result = await _VenteService.GetAvoir(pConnexionName);
+            return Ok(result);
+        }
+
+
+        [HttpGet(nameof(GetRetour))]
+        public async Task<ActionResult> GetRetour(string pConnexionName)
+        {
+            var result = await _VenteService.GetRetour(pConnexionName);
+            return Ok(result);
+        }
+
 
 
     }

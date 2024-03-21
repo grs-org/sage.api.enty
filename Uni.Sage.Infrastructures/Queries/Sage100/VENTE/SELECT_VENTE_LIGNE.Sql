@@ -2,4 +2,4 @@
 ,DL_Remise01REM_Valeur Remise
 ,DL_PrixUnitaire Prix,DL_Taxe1 Taxe,DL_MontantHT MontantHT,DL_MontantTTC MontantTTC
 from F_DOCLIGNE
-where  DO_Type = 5
+where  DO_Type = @Type

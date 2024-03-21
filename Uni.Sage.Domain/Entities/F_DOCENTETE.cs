@@ -116,6 +116,7 @@ namespace Uni.Sage.Domain.Entities
         public int cbHashVersion { get; set; }
         public string DO_FactureFile { get; set; }
         public string Source_BC { get; set; }
+        public string Client_Inty { get; set; }
         public List<F_DOCLIGNE> F_DOCLIGNEs { get; set; }
 
         public F_DOCENTETE()
@@ -163,7 +164,7 @@ namespace Uni.Sage.Domain.Entities
             DO_DebutPeriod = DateTime.MinValue.MinGregorianDate();
             DO_FinPeriod = DateTime.MinValue.MinGregorianDate();
             CG_Num = "";
-            DO_Statut = 2;
+            DO_Statut = 0;
             DO_Heure =  "000" + DateTime.Now.ToString("HHmmss");
             CA_No =  0;
             CO_NoCaissier =  0;
