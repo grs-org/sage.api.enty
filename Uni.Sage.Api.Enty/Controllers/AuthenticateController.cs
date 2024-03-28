@@ -74,7 +74,7 @@ namespace Uni.Sage.Api.Enty.Controllers
             //Demo Purpose, I have Passed HardCoded User Information    
             if (login.UserName.ToLower() == "sage")
             {
-                user = new LoginModel { UserName = "sage", Password = "sage2022" };
+                user = new LoginModel { UserName = "sage", Password = "sage2024" };
             }
             return user;
         }

@@ -33,7 +33,7 @@ namespace Uni.Sage.Api.Enty
                 {
                     Version = "v1",
                     Title = "Sage Integration API  ",
-                    Description = "For testing purposes, use user = sage, Password = sage2022"
+                    Description = "For testing purposes, use user = sage, Password = sage2024"
                 });
                 // To Enable authorization using Swagger (JWT)
                 swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()

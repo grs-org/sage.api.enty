@@ -1,7 +1,7 @@
-﻿select DO_Piece Piece,DO_Date Date,DO_Ref Reference,DO_Tiers CodeClient,cpt.CT_Intitule Client
+﻿select DO_Piece Piece,DO_Date Date,DO_Ref Reference,DO_Tiers CodeClient,isnull(cpt.CT_Intitule,'') Client
 ,F_DOCENTETE.CO_No CodeCollaborateur,
-c.CO_Nom + ' ' +c.CO_Prenom Collaborateur ,F_DOCENTETE.DE_No CodeDepot,dpt.DE_Intitule Depot
-,t.CT_Intitule Tarif,
+ISNULL(c.CO_Nom + ' ' +c.CO_Prenom,'') Collaborateur,F_DOCENTETE.DE_No CodeDepot ,isnull(dpt.DE_Intitule,'') Depot
+,isnull(t.CT_Intitule,'') Tarif,
 case when do_statut=0 then 'Saisi'
 when do_statut=1 then 'Confirmé' else 'A facturer' end Statut,
 DO_TotalHT TotalHT,DO_TotalTTC TotalTTC

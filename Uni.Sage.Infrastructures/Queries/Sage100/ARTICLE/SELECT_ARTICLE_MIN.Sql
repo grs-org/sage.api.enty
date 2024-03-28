@@ -12,3 +12,4 @@ AR_PrixVen PrixVente
 FROM F_FAMILLE  FM 
 INNER JOIN	 dbo.F_ARTICLE ON F_ARTICLE.FA_CodeFamille = FM.FA_CodeFamille
 INNER JOIN	 dbo.P_UNITE  unt ON unt.cbIndice = F_ARTICLE.AR_UniteVen
+where INTY = 'OUI'
